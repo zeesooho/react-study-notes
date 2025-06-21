@@ -21,3 +21,10 @@
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
+
+# build script output
+/public/posts
+
+# editor directories
+.vscode/
+.idea/

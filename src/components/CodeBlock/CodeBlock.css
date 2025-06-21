@@ -1,0 +1,29 @@
+.code-block-container {
+  margin: 2rem 0;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+.code-highlighter {
+  margin: 0 !important;
+  border-radius: 0 !important;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.preview-container {
+  padding: 1.5rem;
+  background-color: #fdfdfd;
+}
+
+/* 스타일 초기화 경계 */
+.style-reset {
+  all: initial;
+  display: block; /* div의 기본 display 속성 복원 */
+}
+
+/* 초기화 경계 내부의 자식 요소들에 대한 기본 스타일 */
+.style-reset * {
+  all: revert;
+} 
