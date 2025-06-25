@@ -1,0 +1,108 @@
+.comment-container {
+  margin: 1rem 0;
+  border: 1px solid #d1d5db;
+  border-radius: 8px;
+  background-color: #f3f4f6;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+.comment-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 1.5rem;
+  background-color: #e5e7eb;
+  border-bottom: 1px solid #d1d5db;
+}
+
+.comment-header:hover {
+  background-color: #d1d5db;
+}
+
+.comment-title {
+  display: flex;
+  align-items: center;
+  font-weight: 600;
+  color: #374151;
+  font-size: 0.95rem;
+}
+
+.comment-icon {
+  margin-right: 0.5rem;
+  font-size: 1.1rem;
+}
+
+.comment-toggle {
+  background: none;
+  border: none;
+  color: #374151;
+  font-size: 0.8rem;
+  cursor: pointer;
+  padding: 0.5rem;
+  border-radius: 4px;
+  transition: all 0.2s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 24px;
+  min-height: 24px;
+}
+
+.comment-toggle:hover {
+  background-color: #d1d5db;
+  color: #1f2937;
+}
+
+.comment-toggle:focus {
+  outline: 2px solid #374151;
+  outline-offset: 2px;
+}
+
+.comment-toggle.expanded {
+  transform: rotate(0deg);
+}
+
+.comment-content {
+  padding: 1.5rem;
+  color: #374151;
+  line-height: 1.6;
+  font-size: 0.9rem;
+}
+
+.comment-content p {
+  margin: 0.5rem 0;
+}
+
+.comment-content ul, .comment-content ol {
+  margin: 0.5rem 0;
+  padding-left: 1.5rem;
+}
+
+.comment-content li {
+  margin: 0.25rem 0;
+}
+
+.comment-content code {
+  background-color: #e5e7eb;
+  padding: 0.2rem 0.4rem;
+  border-radius: 3px;
+  font-family: 'Monaco', 'Menlo', 'Ubuntu Mono', monospace;
+  font-size: 0.85rem;
+  color: #dc2626;
+}
+
+.comment-content pre {
+  background-color: #f9fafb;
+  padding: 1rem;
+  border-radius: 6px;
+  overflow-x: auto;
+  margin: 0.5rem 0;
+  border: 1px solid #d1d5db;
+}
+
+.comment-content pre code {
+  background: none;
+  padding: 0;
+  color: inherit;
+} 

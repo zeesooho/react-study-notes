@@ -12,15 +12,15 @@ interface PostItemProps {
   compact?: boolean;
 }
 
-const PostItem: React.FC<PostItemProps> = ({ 
+function PostItem({
   number,
-  title, 
-  description, 
-  isExternal = false, 
-  externalUrl, 
+  title,
+  description,
+  isExternal = false,
+  externalUrl,
   internalPath,
   compact = false
-}) => {
+}: PostItemProps) {
   // compact: 숫자만 표시
   // !compact: 숫자. 제목, 설명 표시
   const label = compact ? String(number) : `${number}. ${title}`;
@@ -29,9 +29,9 @@ const PostItem: React.FC<PostItemProps> = ({
   if (isExternal && externalUrl) {
     return (
       <li className={itemClass}>
-        <a 
-          href={externalUrl} 
-          target="_blank" 
+        <a
+          href={externalUrl}
+          target="_blank"
           rel="noopener noreferrer"
           className="post-link"
         >
@@ -54,6 +54,6 @@ const PostItem: React.FC<PostItemProps> = ({
   }
 
   return null;
-};
+}
 
 export default PostItem; 

@@ -1,5 +1,5 @@
 .code-block-container {
-  margin: 2rem 0;
+  margin: 1rem 0;
   border: 1px solid #e0e0e0;
   border-radius: 8px;
   overflow: hidden;
@@ -10,6 +10,47 @@
   margin: 0 !important;
   border-radius: 0 !important;
   border-bottom: 1px solid #e0e0e0;
+}
+
+.preview-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.75rem 1rem;
+  background-color: #f8f9fa;
+  border-bottom: 1px solid #e0e0e0;
+  font-size: 0.9rem;
+  color: #666;
+}
+
+.preview-label {
+  font-weight: 500;
+}
+
+.preview-toggle {
+  background: none;
+  border: none;
+  color: #666;
+  font-size: 0.8rem;
+  cursor: pointer;
+  padding: 0.25rem 0.5rem;
+  border-radius: 3px;
+  transition: all 0.2s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 20px;
+  min-height: 20px;
+}
+
+.preview-toggle:hover {
+  background-color: #e9ecef;
+  color: #495057;
+}
+
+.preview-toggle:focus {
+  outline: 2px solid #007bff;
+  outline-offset: 1px;
 }
 
 .preview-container {

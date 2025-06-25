@@ -36,7 +36,7 @@ const navPosts = [
   },
 ];
 
-const App: React.FC = () => {
+function App() {
   return (
     <Router>
       <div className="App">
@@ -69,6 +69,6 @@ const App: React.FC = () => {
       </div>
     </Router>
   );
-};
+}
 
 export default App;

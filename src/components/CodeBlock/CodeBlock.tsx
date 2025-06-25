@@ -1,25 +1,29 @@
 import React, { useState, useEffect } from 'react';
-import reactElementToJSXString from 'react-element-to-jsx-string';
 import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter';
 import { atomDark } from 'react-syntax-highlighter/dist/cjs/styles/prism';
 import './CodeBlock.css';
 
 interface CodeBlockProps {
-  children: React.ReactElement;
+  code: string;
+  children: React.ReactNode;
   showHighlighter?: boolean;
   showPreview?: boolean;
   style?: React.CSSProperties;
   cssUrl?: string;
+  defaultShowPreview?: boolean;
 }
 
-const CodeBlock: React.FC<CodeBlockProps> = ({
+function CodeBlock({
+  code,
   children,
   showHighlighter = true,
   showPreview = true,
   style,
   cssUrl,
-}) => {
+  defaultShowPreview = true,
+}: CodeBlockProps) {
   const [cssContent, setCssContent] = useState('');
+  const [isPreviewVisible, setIsPreviewVisible] = useState(defaultShowPreview);
 
   useEffect(() => {
     if (cssUrl) {
@@ -35,28 +39,41 @@ const CodeBlock: React.FC<CodeBlockProps> = ({
     }
   }, [cssUrl]);
 
-  const codeString = reactElementToJSXString(children, {
-    showFunctions: true,
-    functionValue: (fn) => `${fn.name}()`,
-  });
+  const togglePreview = () => {
+    setIsPreviewVisible(!isPreviewVisible);
+  };
 
   return (
     <div className="code-block-container">
       {showHighlighter && (
         <SyntaxHighlighter language="tsx" style={atomDark} className="code-highlighter">
-          {codeString}
+          {code}
         </SyntaxHighlighter>
       )}
       {showPreview && (
-        <div className="preview-container" style={style}>
-          <div className="style-reset">
-            {cssContent && <style>{cssContent}</style>}
-            {children}
+        <>
+          <div className="preview-header">
+            <button
+              className={`preview-toggle ${isPreviewVisible ? 'expanded' : ''}`}
+              onClick={togglePreview}
+              aria-expanded={isPreviewVisible}
+              aria-label={isPreviewVisible ? '실행 결과 숨기기' : '실행 결과 보기'}
+            >
+              {isPreviewVisible ? '▼' : '▶'} 실행 결과
+            </button>
           </div>
-        </div>
+          {isPreviewVisible && (
+            <div className="preview-container" style={style}>
+              <div className="style-reset">
+                {cssContent && <style>{cssContent}</style>}
+                {children}
+              </div>
+            </div>
+          )}
+        </>
       )}
     </div>
   );
-};
+}
 
 export default CodeBlock; 
