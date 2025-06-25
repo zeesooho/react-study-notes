@@ -31,7 +31,8 @@ function Comment({
           aria-expanded={isExpanded}
           aria-label={isExpanded ? '내용 접기' : '내용 펼치기'}
         >
-          {isExpanded ? '▼' : '▶'}
+          {/*화살표 아이콘*/}
+          {isExpanded ? '⬆️' : '⬇️'}
         </button>
       </div>
       {isExpanded && (
