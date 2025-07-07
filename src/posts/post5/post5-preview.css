@@ -1,0 +1,67 @@
+/* Post5 전용 스타일 */
+
+.user-card {
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 16px;
+  margin: 8px;
+  max-width: 300px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+}
+
+.user-card.active {
+  border-color: #4caf50;
+  background-color: #f8fff8;
+}
+
+.user-card.inactive {
+  border-color: #f44336;
+  background-color: #fff8f8;
+  opacity: 0.7;
+}
+
+.user-card h3 {
+  margin: 0 0 8px 0;
+  color: #333;
+  font-size: 18px;
+}
+
+.user-card p {
+  margin: 4px 0;
+  color: #666;
+}
+
+.status {
+  display: inline-block;
+  padding: 4px 8px;
+  border-radius: 12px;
+  font-size: 12px;
+  font-weight: bold;
+  margin: 8px 0;
+}
+
+.status.online {
+  background-color: #4caf50;
+  color: white;
+}
+
+.status.offline {
+  background-color: #f44336;
+  color: white;
+}
+
+.user-card button {
+  background-color: #2196f3;
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: background-color 0.3s ease;
+}
+
+.user-card button:hover {
+  background-color: #1976d2;
+}
