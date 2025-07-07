@@ -7,11 +7,7 @@ interface CommentProps {
   defaultExpanded?: boolean;
 }
 
-function Comment({
-  title,
-  children,
-  defaultExpanded = true
-}: CommentProps) {
+function Comment({ title, children, defaultExpanded = true }: CommentProps) {
   const [isExpanded, setIsExpanded] = useState(defaultExpanded);
 
   const toggleExpanded = () => {
@@ -35,13 +31,9 @@ function Comment({
           {isExpanded ? '⬆️' : '⬇️'}
         </button>
       </div>
-      {isExpanded && (
-        <div className="comment-content">
-          {children}
-        </div>
-      )}
+      {isExpanded && <div className="comment-content">{children}</div>}
     </div>
   );
 }
 
-export default Comment; 
+export default Comment;

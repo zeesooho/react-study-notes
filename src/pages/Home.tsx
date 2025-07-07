@@ -20,7 +20,7 @@ function Home({ posts }: HomeProps) {
     <div className="home">
       <h2>안녕하세요! 👋</h2>
       <p>웹 개발을 공부하면서 예시를 정리하기 위한 사이트입니다.</p>
-      
+
       <div className="post-list">
         <h3>📚 학습 포스트 목록</h3>
         <ul>

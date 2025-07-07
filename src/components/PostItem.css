@@ -4,7 +4,9 @@
   border: 1px solid #e0e0e0;
   border-radius: 8px;
   background-color: #f9f9f9;
-  transition: transform 0.2s, box-shadow 0.2s;
+  transition:
+    transform 0.2s,
+    box-shadow 0.2s;
 }
 
 .post-item:hover {
@@ -52,11 +54,13 @@
   border-radius: 4px;
   background: none;
   color: #61dafb;
-  transition: background 0.2s, color 0.2s;
+  transition:
+    background 0.2s,
+    color 0.2s;
   display: inline-block;
 }
 
 .post-item.compact .post-link:hover {
   background: #eaf6fb;
   color: #282c34;
-} 
+}

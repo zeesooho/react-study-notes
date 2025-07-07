@@ -38,7 +38,9 @@
   border: 1px solid #e0e0e0;
   border-radius: 8px;
   background-color: #f9f9f9;
-  transition: transform 0.2s, box-shadow 0.2s;
+  transition:
+    transform 0.2s,
+    box-shadow 0.2s;
 }
 
 .post-list li:hover {
@@ -61,4 +63,4 @@
   margin: 5px 0 0 0;
   color: #666;
   font-size: 0.9rem;
-} 
+}

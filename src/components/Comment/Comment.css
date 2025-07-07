@@ -74,7 +74,8 @@
   margin: 0.5rem 0;
 }
 
-.comment-content ul, .comment-content ol {
+.comment-content ul,
+.comment-content ol {
   margin: 0.5rem 0;
   padding-left: 1.5rem;
 }
@@ -105,4 +106,4 @@
   background: none;
   padding: 0;
   color: inherit;
-} 
+}

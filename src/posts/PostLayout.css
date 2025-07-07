@@ -83,7 +83,8 @@
   margin: 1.5rem 0 0.8rem 0;
 }
 
-.post-content ul, .post-content ol {
+.post-content ul,
+.post-content ol {
   margin: 1rem 0;
   padding-left: 2rem;
 }
@@ -120,23 +121,23 @@
 }
 
 /* 언어별 코드 블록 스타일 */
-.post-content pre[data-language="html"] {
+.post-content pre[data-language='html'] {
   border-left: 4px solid #e34c26;
 }
 
-.post-content pre[data-language="css"] {
+.post-content pre[data-language='css'] {
   border-left: 4px solid #264de4;
 }
 
-.post-content pre[data-language="bash"] {
+.post-content pre[data-language='bash'] {
   border-left: 4px solid #4eaa25;
 }
 
-.post-content pre[data-language="tsx"] {
+.post-content pre[data-language='tsx'] {
   border-left: 4px solid #3178c6;
 }
 
-.post-content pre[data-language="ts"] {
+.post-content pre[data-language='ts'] {
   border-left: 4px solid #3178c6;
 }
 
@@ -172,7 +173,8 @@
   gap: 20px;
 }
 
-.nav-prev, .nav-next {
+.nav-prev,
+.nav-next {
   flex: 1;
   max-width: 45%;
 }
@@ -209,30 +211,31 @@
   .post-layout {
     padding: 15px;
   }
-  
+
   .post-title {
     font-size: 2rem;
   }
-  
+
   .post-content h2 {
     font-size: 1.5rem;
   }
-  
+
   .post-content h3 {
     font-size: 1.2rem;
   }
-  
+
   .nav-container {
     flex-direction: column;
     gap: 15px;
   }
-  
-  .nav-prev, .nav-next {
+
+  .nav-prev,
+  .nav-next {
     max-width: 100%;
     text-align: center;
   }
-  
+
   .nav-next {
     text-align: center;
   }
-} 
+}

@@ -10,29 +10,19 @@ interface PostLayoutComponentProps {
   children: React.ReactNode;
 }
 
-function PostLayout({
-  title,
-  children,
-  titleLink
-}: PostLayoutProps & PostLayoutComponentProps) {
-  const defaultLink = "https://velog.io/@zeeso/series/React-Node.js-TypeScript%EB%A1%9C-%EC%8B%9C%EC%9E%91%ED%95%98%EB%8A%94-%EC%9B%B9-%EA%B0%9C%EB%B0%9C";
+function PostLayout({ title, children, titleLink }: PostLayoutProps & PostLayoutComponentProps) {
+  const defaultLink =
+    'https://velog.io/@zeeso/series/React-Node.js-TypeScript%EB%A1%9C-%EC%8B%9C%EC%9E%91%ED%95%98%EB%8A%94-%EC%9B%B9-%EA%B0%9C%EB%B0%9C';
   const link = titleLink || defaultLink;
 
   return (
     <div className="post-layout">
       <h1 className="post-title">
-        <a
-          href={link}
-          target="_blank"
-          rel="noopener noreferrer"
-          className="title-link"
-        >
+        <a href={link} target="_blank" rel="noopener noreferrer" className="title-link">
           {title}
         </a>
       </h1>
-      <div className="post-content">
-        {children}
-      </div>
+      <div className="post-content">{children}</div>
     </div>
   );
 }
@@ -41,7 +31,7 @@ function PostLayout({
 export const withPostLayout = <P extends object>(
   WrappedComponent: React.ComponentType<P>,
   title: string,
-  titleLink?: string
+  titleLink?: string,
 ) => {
   function WithPostLayoutComponent(props: P) {
     return (
@@ -56,4 +46,4 @@ export const withPostLayout = <P extends object>(
   return WithPostLayoutComponent;
 };
 
-export default PostLayout; 
+export default PostLayout;

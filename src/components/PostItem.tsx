@@ -19,7 +19,7 @@ function PostItem({
   isExternal = false,
   externalUrl,
   internalPath,
-  compact = false
+  compact = false,
 }: PostItemProps) {
   // compact: 숫자만 표시
   // !compact: 숫자. 제목, 설명 표시
@@ -29,12 +29,7 @@ function PostItem({
   if (isExternal && externalUrl) {
     return (
       <li className={itemClass}>
-        <a
-          href={externalUrl}
-          target="_blank"
-          rel="noopener noreferrer"
-          className="post-link"
-        >
+        <a href={externalUrl} target="_blank" rel="noopener noreferrer" className="post-link">
           {label}
         </a>
         {!compact && description && <p className="post-description">{description}</p>}
@@ -56,4 +51,4 @@ function PostItem({
   return null;
 }
 
-export default PostItem; 
+export default PostItem;
